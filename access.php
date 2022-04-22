@@ -8,3 +8,4 @@ if(isset($NAME))
   } else{
     header("Location: http://thecalculatorguy.ga/F.R.E.D./403.html");
   }
+?>
