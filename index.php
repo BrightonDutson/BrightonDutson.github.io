@@ -5,10 +5,6 @@
   <meta name="description" content="fred" />
   <meta charset="utf-8">
   <title>fred</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
