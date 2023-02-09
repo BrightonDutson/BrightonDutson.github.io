@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Ape Write</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+		<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+            
+        </script>
+    </head>
+    <body>
+    
+<form>
+  <button formaction="https://thecalculatorguy.net/Assignments/apewrite/Duck/duck.html">Duck</button>
+</form>
+        <py-config>
+            
+        </py-config>
+        <!-- I did not delete the code I moved it to main.py so I could fix this code first -->
+        <py-script>
+			import random
+			import time
+		
+			words = ["the", "be", "to", "of", "and", "a", "in", "that", "have", "I", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", "what", "so", "up", "out", "if", "about", "who", "get", "which", "go", "me", "when", "make", "can", "like", "time", "no", "just", "him", "know", "take", "person", "into", "year", "your", "good", "some", "could", "them", "see", "other", "than", "then", "that", "now", "look", "only", "come", "its", "over", "think", "also", "back", "after", "use", "two", "how", "our", "work", "first", "well", "way", "even", "new", "want", "because", "any", "these", "give", "day", "most", "us"]
+
+			score = 0
+
+			def get_random_words(num_words):
+				return random.sample(words, num_words)
+
+			def play_game():
+					global score
+					words_to_type = get_random_words(5)
+					start_time = time.time()
+					user_input = input("Type the words: {}\n\n".format(" ".join(words_to_type)))
+					end_time = time.time()
+					if user_input == " ".join(words_to_type):
+						print("Correct!")
+						score += 1
+					else:
+						print("Incorrect. The words were {}.".format(" ".join(words_to_type)))
+						print("Time taken: {:.2f} seconds\n".format(end_time - start_time))
+						print("Score: {}\n".format(score))
+						play_game()
+
+			play_game()
+
+        </py-script>
+        <py-repl>
+              
+        </py-repl>
+        <div id="graph-area">
+                
+        </div>
+</html>
